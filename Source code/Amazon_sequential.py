@@ -19,7 +19,7 @@ from sklearn.decomposition import TruncatedSVD
 # In[2]:
 
 
-amazon_ratings = pd.read_csv('/Users/coraljain/Downloads/Customer.CSV')
+amazon_ratings = pd.read_csv('C:\\Users\\1\\Documents\\WSU\\big data\\Project\\Source Code\\Data\\Customer.CSV')
 amazon_ratings = amazon_ratings.dropna()
 amazon_ratings
 
@@ -55,7 +55,9 @@ if __name__=="__main__":
         Recommend = list(X.index[correlation_product_ID > 0.90])
         # Removes the item already bought by the customer
         Recommend.remove(i) 
-        print(Recommend[0:9])
+        print("\n")
+        print(Recommend[0:4])
+        print("\n")
     else:
         print("product ID not found")
             
